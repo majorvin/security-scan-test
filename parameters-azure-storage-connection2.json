@@ -1,0 +1,26 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "logicAppName": {
+        "value": "abc"
+      },
+      "MerchIdURL": {
+        "value": "https://dasdasd.acasdasdosta.com/api/"
+      },
+      "VendorStoresURL": {
+        "value": "https://dasdas.dadasd.com/api/"
+      },
+      "SNAPAPIUserName": { "value": "corp/fdfsdf" },
+      "EncStorageConnection": { "value": "DefaultEndpointsProtocol=https;AccountName=1232;AccountKey=i872SyMhp8LaG+RsKpX/TLx7lQoHfScqudzj/OUTdCPpFdOuEgJud3fH+EId6CYrvrwYdbd3EGxoehdTTWZujg==;EndpointSuffix=core.windows.net" },
+      "KeyVaultBaseAddress": { "value": "https://asdasd212.vault.azure.net/" },
+      "secretName": { "value": "blah" },
+      "sftpwithssh_2_hostName": { "value": "123.fdf.com" },
+      "sftpwithssh_2_userName": { "value": "myusername" },
+      "sftpfolderPath": { "value": "/TEST/" },
+      "InformationEmailTo": { "value": "dfd.dfdf@fdf.com" },
+      "ErrorEmailTo": { "value": "dfdsf.dsfdsf@dfdf.com" },
+      "environment": {"value": "dev"}
+  
+    }
+  }
