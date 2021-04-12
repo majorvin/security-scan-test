@@ -61,6 +61,7 @@
     "LogicAppIntegrationAccount": {
       "type": "string",
       "minLength": 1,
+      // fake sub id
       "defaultValue": "/subscriptions/1824bal3-123v-4dab-9a84-b0d509ld23c7/resourcegroups/ise/providers/Microsoft.Logic/integrationAccounts/ise"
     },
     "MerchIdURL": {
@@ -177,6 +178,7 @@
     },
     "logicAppISEid": {
       "type": "string",
+      // fake sub id
       "defaultValue": "/subscriptions/1824bal3-123v-4dab-9a84-b0d509ld23c7/resourceGroups/rga123/providers/Microsoft.Logic/integrationServiceEnvironments/ise123"
     },
     "azureblob_1_Connection_Name": {
