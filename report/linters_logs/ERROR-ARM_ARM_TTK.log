@@ -1,0 +1,89 @@
+Results of arm-ttk linter (version 0.0.0)
+See documentation on https://nvuillam.github.io/mega-linter/descriptors/arm_arm_ttk/
+-----------------------------------------------
+
+❌ [ERROR] logicapp.json
+                                                                                                                                                                                                                                                                                                                                                                                                                    
+    Validating lint\logicapp.json
+      AllFiles
+        [+] JSONFiles Should Be Valid (27 ms)
+    Pass  : 1
+    Total : 1
+    Fail  : 0
+    
+    
+    
+      deploymentTemplate
+        [+] adminUsername Should Not Be A Literal (121 ms)
+        [+] apiVersions Should Be Recent In Reference Functions (18 ms)
+        [-] apiVersions Should Be Recent (131 ms)
+            Api versions must be the latest or under 2 years old (730 days) 
+    - API version 2016-06-01 of Microsoft.Logic/workflows is 1910 days old
+            Valid Api Versions:
+            2019-05-01
+    
+        [+] artifacts parameter (19 ms)
+        [+] CommandToExecute Must Use ProtectedSettings For Secrets (97 ms)
+        [+] DependsOn Best Practices (44 ms)
+        [+] Deployment Resources Must Not Be Debug (42 ms)
+        [+] DeploymentTemplate Must Not Contain Hardcoded Uri (12 ms)
+        [?] DeploymentTemplate Schema Is Correct (4 ms)
+            Template is using schema version '2015-01-01' which has been dep
+    recated and is no longer maintained.
+    
+        [+] Dynamic Variable References Should Not Use Concat (2 ms)
+        [-] IDs Should Be Derived From ResourceIDs (71 ms)
+            Property: "id" must use one of the following expressions for an 
+    resourceId property:
+                extensionResourceId,resourceId,subscriptionResourceId,tenantResourc
+    eId,if,parameters,reference,variables,subscription,guid
+            Property: "id" must use one of the following expressions for
+     an resourceId property:
+                extensionResourceId,resourceId,subscriptionResourceId,tenantResourc
+    eId,if,parameters,reference,variables,subscription,guid
+            Property: "id" must use one of the following expressions for
+     an resourceId property:
+                extensionResourceId,resourceId,subscriptionResourceId,tenantResourc
+    eId,if,parameters,reference,variables,subscription,guid
+    
+        [-] Location Should Not Be Hardcoded (31 ms)
+            logicapp.json must use the location parameter, not resourceGroup
+    ().location or deployment().location (except when used as a default value in th
+    e main template)
+    
+        [+] ManagedIdentityExtension must not be used (2 ms)
+        [+] Min And Max Value Are Numbers (5 ms)
+        [+] Outputs Must Not Contain Secrets (16 ms)
+        [-] Parameters Must Be Referenced (99 ms)
+            Unreferenced parameter: MerchIdURL
+            Unreferenced parameter: CurrentStoresURL
+            Unreferenced parameter: APIUserName
+            Unreferenced parameter: InformationEmailTo
+            Unreferenced parameter: ErrorEmailTo
+            Unreferenced parameter: sftpfolderPath
+            Unreferenced parameter: EncStorageConnection
+            Unreferenced parameter: KeyVaultBaseAddress
+            Unreferenced parameter: secretName
+            Unreferenced parameter: passPhrase
+    
+        [+] providers apiVersions Is Not Permitted (4 ms)
+        [+] ResourceIds should not contain (12 ms)
+        [+] Resources Should Have Location (29 ms)
+        [+] Secure Params In Nested Deployments (61 ms)
+        [+] Secure String Parameters Cannot Have Default (4 ms)
+        [-] Template Should Not Contain Blanks (37 ms)
+            Empty property:  {
+               
+              } found on line: 238 Line: 238, Column: 21
+    
+        [+] Variables Must Be Referenced (11 ms)
+        [+] Virtual Machines Should Not Be Preview (98 ms)
+        [+] VM Images Should Use Latest Version (1 ms)
+        [+] VM Size Should Be A Parameter (42 ms)
+    Pass  : 22
+    Total : 27
+    Fail  : 5
+
+✅ [SUCCESS] parameters-azure-storage-connection.json
+✅ [SUCCESS] parameters-azure-storage-connection2.json
+✅ [SUCCESS] parameters-passphrase.json

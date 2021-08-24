@@ -1,0 +1,136 @@
+----------------------------------------------------------------------------------------------------
+------------------------------------------- Mega-Linter --------------------------------------------
+----------------------------------------------------------------------------------------------------
+ - Image Creation Date: 2021-08-23T06:10:53Z
+ - Image Revision: ad0cf3cb
+ - Image Version: latest
+----------------------------------------------------------------------------------------------------
+The Mega-Linter documentation can be found at:
+ - https://nvuillam.github.io/mega-linter
+----------------------------------------------------------------------------------------------------
+GITHUB_REPOSITORY: 
+GITHUB_REF: 
+GITHUB_RUN_ID: 
+
+
+Skipped linters: ANSIBLE_ANSIBLE_LINT, BASH_EXEC, BASH_SHELLCHECK, BASH_SHFMT, CLOJURE_CLJ_KONDO, CLOUDFORMATION_CFN_LINT, COFFEE_COFFEELINT, COPYPASTE_JSCPD, CPP_CPPLINT, CREDENTIALS_SECRETLINT, CSHARP_DOTNET_FORMAT, CSS_SCSS_LINT, CSS_STYLELINT, C_CPPLINT, DART_DARTANALYZER, DOCKERFILE_DOCKERFILELINT, DOCKERFILE_HADOLINT, EDITORCONFIG_EDITORCONFIG_CHECKER, ENV_DOTENV_LINTER, GHERKIN_GHERKIN_LINT, GIT_GIT_DIFF, GO_GOLANGCI_LINT, GO_REVIVE, GRAPHQL_GRAPHQL_SCHEMA_LINTER, GROOVY_NPM_GROOVY_LINT, HTML_HTMLHINT, JAVASCRIPT_ES, JAVASCRIPT_PRETTIER, JAVASCRIPT_STANDARD, JAVA_CHECKSTYLE, JSON_ESLINT_PLUGIN_JSONC, JSON_JSONLINT, JSON_PRETTIER, JSON_V8R, JSX_ESLINT, KOTLIN_KTLINT, KUBERNETES_KUBEVAL, LATEX_CHKTEX, LUA_LUACHECK, MARKDOWN_MARKDOWNLINT, MARKDOWN_MARKDOWN_LINK_CHECK, MARKDOWN_MARKDOWN_TABLE_FORMATTER, MARKDOWN_REMARK_LINT, OPENAPI_SPECTRAL, PERL_PERLCRITIC, PHP_BUILTIN, PHP_PHPCS, PHP_PHPSTAN, PHP_PSALM, POWERSHELL_POWERSHELL, PROTOBUF_PROTOLINT, PUPPET_PUPPET_LINT, PYTHON_BANDIT, PYTHON_BLACK, PYTHON_FLAKE8, PYTHON_ISORT, PYTHON_MYPY, PYTHON_PYLINT, RAKU_RAKU, RST_RSTCHECK, RST_RSTFMT, RST_RST_LINT, RUBY_RUBOCOP, RUST_CLIPPY, R_LINTR, SALESFORCE_SFDX_SCANNER_APEX, SALESFORCE_SFDX_SCANNER_AURA, SALESFORCE_SFDX_SCANNER_LWC, SCALA_SCALAFIX, SNAKEMAKE_LINT, SNAKEMAKE_SNAKEFMT, SPELL_CSPELL, SPELL_MISSPELL, SQL_SQLFLUFF, SQL_SQL_LINT, SQL_TSQLLINT, SWIFT_SWIFTLINT, TEKTON_TEKTON_LINT, TERRAFORM_CHECKOV, TERRAFORM_TERRAFORM_FMT, TERRAFORM_TERRAGRUNT, TERRAFORM_TERRASCAN, TERRAFORM_TFLINT, TSX_ESLINT, TYPESCRIPT_ES, TYPESCRIPT_PRETTIER, TYPESCRIPT_STANDARD, VBDOTNET_DOTNET_FORMAT, XML_XMLLINT, YAML_PRETTIER, YAML_V8R, YAML_YAMLLINT
+To receive reports as email, please set variable EMAIL_REPORTER_EMAIL
+Listing all files in directory [/tmp/lint], then filter with:
+- File extensions: .json
+Kept [9] files on [15] found files
+
++----MATCHING LINTERS--+----------+----------------+------------+
+| Descriptor | Linter  | Criteria | Matching files | Format/Fix |
++------------+---------+----------+----------------+------------+
+| ARM        | arm-ttk | .json    | 4              | no         |
++------------+---------+----------+----------------+------------+
+
+
+[1m### Processed [ARM] files[0m
+- Using [arm-ttk v0.0.0] https://github.com/Azure/arm-ttk
+- Mega-Linter key: [ARM_ARM_TTK]
+- Rules config: [.arm-ttk.psd1]
+[31m[arm-ttk] logicapp.json - ERROR - 1 error(s)[0m
+[31m--Error detail:
+                                                                                                                                                                                                                                                                                                                                                                                                                
+[35mValidating lint\logicapp.json
+[0m[35m  AllFiles
+[0m[32m    [+] JSONFiles Should Be Valid (27 ms)[0m
+Pass  : 1
+Total : 1
+Fail  : 0
+
+
+
+[35m  deploymentTemplate
+[0m[32m    [+] adminUsername Should Not Be A Literal (121 ms)[0m
+[32m    [+] apiVersions Should Be Recent In Reference Functions (18 ms)[0m
+[1;31m    [-] apiVersions Should Be Recent (131 ms)[0m
+[1;31m        Api versions must be the latest or under 2 years old (730 days) 
+- API version 2016-06-01 of Microsoft.Logic/workflows is 1910 days old
+[0m        Valid Api Versions:
+        2019-05-01
+
+[32m    [+] artifacts parameter (19 ms)[0m
+[32m    [+] CommandToExecute Must Use ProtectedSettings For Secrets (97 ms)[0m
+[32m    [+] DependsOn Best Practices (44 ms)[0m
+[32m    [+] Deployment Resources Must Not Be Debug (42 ms)[0m
+[32m    [+] DeploymentTemplate Must Not Contain Hardcoded Uri (12 ms)[0m
+[1;33m    [?] DeploymentTemplate Schema Is Correct (4 ms)[0m
+[1;33m        Template is using schema version '2015-01-01' which has been dep
+recated and is no longer maintained.
+[0m
+[32m    [+] Dynamic Variable References Should Not Use Concat (2 ms)[0m
+[1;31m    [-] IDs Should Be Derived From ResourceIDs (71 ms)[0m
+[1;31m        Property: "id" must use one of the following expressions for an 
+resourceId property:
+            extensionResourceId,resourceId,subscriptionResourceId,tenantResourc
+eId,if,parameters,reference,variables,subscription,guid
+[0m[1;31m        Property: "id" must use one of the following expressions for
+ an resourceId property:
+            extensionResourceId,resourceId,subscriptionResourceId,tenantResourc
+eId,if,parameters,reference,variables,subscription,guid
+[0m[1;31m        Property: "id" must use one of the following expressions for
+ an resourceId property:
+            extensionResourceId,resourceId,subscriptionResourceId,tenantResourc
+eId,if,parameters,reference,variables,subscription,guid
+[0m
+[1;31m    [-] Location Should Not Be Hardcoded (31 ms)[0m
+[1;31m        logicapp.json must use the location parameter, not resourceGroup
+().location or deployment().location (except when used as a default value in th
+e main template)
+[0m
+[32m    [+] ManagedIdentityExtension must not be used (2 ms)[0m
+[32m    [+] Min And Max Value Are Numbers (5 ms)[0m
+[32m    [+] Outputs Must Not Contain Secrets (16 ms)[0m
+[1;31m    [-] Parameters Must Be Referenced (99 ms)[0m
+[1;31m        Unreferenced parameter: MerchIdURL
+[0m[1;31m        Unreferenced parameter: CurrentStoresURL
+[0m[1;31m        Unreferenced parameter: APIUserName
+[0m[1;31m        Unreferenced parameter: InformationEmailTo
+[0m[1;31m        Unreferenced parameter: ErrorEmailTo
+[0m[1;31m        Unreferenced parameter: sftpfolderPath
+[0m[1;31m        Unreferenced parameter: EncStorageConnection
+[0m[1;31m        Unreferenced parameter: KeyVaultBaseAddress
+[0m[1;31m        Unreferenced parameter: secretName
+[0m[1;31m        Unreferenced parameter: passPhrase
+[0m
+[32m    [+] providers apiVersions Is Not Permitted (4 ms)[0m
+[32m    [+] ResourceIds should not contain (12 ms)[0m
+[32m    [+] Resources Should Have Location (29 ms)[0m
+[32m    [+] Secure Params In Nested Deployments (61 ms)[0m
+[32m    [+] Secure String Parameters Cannot Have Default (4 ms)[0m
+[1;31m    [-] Template Should Not Contain Blanks (37 ms)[0m
+[1;31m        Empty property:  {
+           
+          } found on line: 238 Line: 238, Column: 21
+[0m
+[32m    [+] Variables Must Be Referenced (11 ms)[0m
+[32m    [+] Virtual Machines Should Not Be Preview (98 ms)[0m
+[32m    [+] VM Images Should Use Latest Version (1 ms)[0m
+[32m    [+] VM Size Should Be A Parameter (42 ms)[0m
+Pass  : 22
+Total : 27
+Fail  : 5
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                [0m
+[arm-ttk] parameters-azure-storage-connection.json - SUCCESS - 0 error(s)
+[arm-ttk] parameters-azure-storage-connection2.json - SUCCESS - 0 error(s)
+[arm-ttk] parameters-passphrase.json - SUCCESS - 0 error(s)
+[31m❌ Linted [ARM] files with [arm-ttk]: Found 1 error(s) - (10.4s)[0m
+[Text Reporter] Generated TEXT report: /tmp/lint/report/linters_logs/ERROR-ARM_ARM_TTK.log
+
++----SUMMARY-+---------+-------+-------+--------+--------------+
+| Descriptor | Linter  | Files | Fixed | Errors | Elapsed time |
++------------+---------+-------+-------+--------+--------------+
+| ❌ ARM     | arm-ttk |     4 |       |      1 |        10.4s |
++------------+---------+-------+-------+--------+--------------+
+
+[GitHub Comment Reporter] No GitHub Token found, so skipped post of PR comment
+[Updated Sources Reporter] copied 1 fixed source files in folder /tmp/lint/report/updated_sources.
+Download it from artifacts then copy-paste it in your local repo to apply linters updates
+❌ Error(s) have been found during linting
+To disable linters or customize their checks, you can use a .mega-linter.yml file at the root of your repository
+More info at https://nvuillam.github.io/mega-linter/configuration/
